@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>範例一：HTML 與 CSS 寫在同一個檔案</title>
+
+  <!-- ===== CSS 區：負責「美化」，寫在 <style> 標籤裡 ===== -->
+  <style>
+    /* body：整頁的背景色與字型 */
+    body {
+      background-color: #f2f5f8;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      margin: 0;
+      padding: 40px 16px;
+    }
+
+    /* .card：自我介紹卡片的外框 */
+    .card {
+      max-width: 480px;
+      margin: 0 auto;              /* 左右置中 */
+      background-color: #ffffff;
+      padding: 32px;
+      border-radius: 12px;          /* 圓角 */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* h1：標題的顏色與大小 */
+    h1 {
+      color: #2c5d8a;
+      font-size: 28px;
+      margin-top: 0;
+    }
+
+    /* p：段落行距 */
+    p {
+      color: #444444;
+      line-height: 1.8;
+    }
+
+    /* .tag：興趣標籤 */
+    .tag {
+      display: inline-block;
+      background-color: #e3eef8;
+      color: #2c5d8a;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin: 4px 4px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HTML 區：負責「骨架」，決定有哪些內容 ===== -->
+  <div class="card">
+    <h1>哈囉哇!這邊是yiyi</h1>
+    <p>這裡是自介和屯圖區~</p>
+    <p>目前主要都深坑在：</p>
+    <span class="tag">OC</span>
+    <span class="tag">新世界</span>
+    <span class="tag">渣反</span>
+  </div>
+
+<h3>
+  歡迎來到yiyi的自介
+  <small class="text-body-secondary">坑多且雜請注意</small>
+</h3>
+
+<div class="card" style="width: 18rem;">
+  <img src="01-inline/Photo/110411.png" class="card-img-top" alt="yiyi飛天圖">
+  <div class="card-body">
+    <p class="card-text"></p>From派派.</p>
+  </div>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="01-inline/Photo/shoto1104.jpg" class="d-block w-100" alt="shoto">
+    </div>
+    <div class="carousel-item">
+      <img src="01-inline/Photo/110411.png" class="d-block w-100" alt="yifili">
+    </div>
+    <div class="carousel-item">
+      <img src="01-inline/Photo/svsss1104.jpg" class="d-block w-100" alt="svs">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</body>
+</html>
